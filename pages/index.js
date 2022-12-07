@@ -1,3 +1,8 @@
+import PlaceCard from "../components/PlaceCard"
+
+
+
+
 
 export default function Home(props) {
 
