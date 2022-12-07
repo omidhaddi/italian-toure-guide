@@ -1,0 +1,36 @@
+.navbar {
+  flex-shrink: 0;
+  background: #f4f4f4;
+  color: #444;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f8f9fb;;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbarLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  font-size: 28px;
+  margin-bottom: 3px;
+}
