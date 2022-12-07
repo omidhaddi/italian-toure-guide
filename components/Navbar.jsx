@@ -87,5 +87,9 @@ export default function Navbar() {
         </div>
       </div>
     </>
-  );
+  )
+export default function Navbar(props) {
+    return (
+
+    )
 }
