@@ -1,0 +1,11 @@
+.searchBar {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  bottom: 0;
+  top: 0;
+  width: 80vw;
+  /* margin-left: 50px;
+  margin-top: 300px; */
+  padding: 15px;
+}
+
