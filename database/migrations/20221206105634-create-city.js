@@ -13,6 +13,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       description: {
+        type: Sequelize.STRING(1000)
+      },
+      imageUrl: {
         type: Sequelize.STRING
       },
       createdAt: {

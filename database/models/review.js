@@ -1,12 +1,12 @@
 'use strict';
 
-import Connection from 'pg/lib/connection';
+import Connection from '../connection';
 
 const { Model, DataTypes } = require('sequelize');
 const initReview = (sequelize, DataTypes) => {
   class Review extends Model {
+
     static associate(models) {
-      // define association here
       Review.belongsTo(models.User),
         Review.belongsTo(models.Place)
     }
@@ -22,4 +22,6 @@ const initReview = (sequelize, DataTypes) => {
   });
   return Review;
 };
+
+
 export default initReview(Connection, DataTypes)

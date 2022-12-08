@@ -1,6 +1,5 @@
 'use strict';
-
-import Connection from 'pg/lib/connection';
+import Connection from '../connection';
 
 const { Model, DataTypes } = require('sequelize');
 const initUser = (sequelize, DataTypes) => {
