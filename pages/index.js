@@ -4,6 +4,8 @@ import italyRome from "../components/images/italyRome.jpg"
 import Search from "../components/Search"
 import styles from "../styles/Home.module.css"
 import Head from "next/head";
+import Image from "next/image";
+import logo from "../components/images/logo.png"
 
 
 
@@ -23,6 +25,13 @@ export default function Home(props) {
           backgroundPosition: 'center center',
         }}
       >
+        <Image
+          src={logo}
+          className={styles.image}
+          height={110}
+          width={100}
+          alt="icon"
+        />
         <div className={styles.homeText}>
           <h4 style={{ textAlign: 'center', }}
           >Welcome to italian tour guid <br /> the place <br /> that you can manage your trip</h4>
