@@ -1,6 +1,5 @@
 'use strict';
-
-import Connection from 'pg/lib/connection';
+import Connection from '../connection';
 
 const { Model, DataTypes } = require('sequelize');
 
@@ -14,11 +13,14 @@ const initCity = (sequelize, DataTypes) => {
   }
   City.init({
     name: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    imageUrl: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'City',
   });
   return City;
 };
+
+
 export default initCity(Connection, DataTypes)

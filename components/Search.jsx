@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import styles from "../styles/Search.module.css";
 
 const Search = () => {
-  const [searchInput, setSearchInput] = useState("");
+  const cityList = [{ name: "Milano" }, { name: "Mantova" }, { name: "Roma" }];
 
-  const cities = [{ name: "Milano" }, { name: "Mantova" }, { name: "Roma" }];
+  const [cities, setCities] = useState(cityList);
+
+  // search the cities
+  // when the input changes
+  // filter the cities by input value
+  // set cities to the new filtered array
+  //show the cities in the list
 
   const handleChange = (event) => {
     event.preventDefault();
-    console.log(event);
-    setSearchInput(event.target.value);
+    const searchInput = event.target.value;
+    if (searchInput.length > 0) {
+      const newCities = cityList.filter((city) =>
+        city.name.toLowerCase().includes(searchInput)
+      );
+      setCities(newCities);
+    }
   };
-
-  if (searchInput.length > 0) {
-    cities.filter((country) => {
-      return country.name.match(searchInput);
-    });
-  }
 
   return (
     <>
@@ -26,14 +32,15 @@ const Search = () => {
           className="form-control"
           placeholder="Search your city"
           onChange={handleChange}
-          value={searchInput}
         />
 
-        {/* <ul>
+        <ul>
           {cities.map((city) => (
-            <li key={city.name}>{city.name}</li>
+            <Link href="/" key={city.name}>
+              <li key={city.name}>{city.name}</li>
+            </Link>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </>
   );

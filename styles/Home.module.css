@@ -103,11 +103,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 @media (max-width: 400px) {
   .grid {
     width: 100%;
@@ -134,17 +129,22 @@
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  top: 18%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vw;
-  margin-top: 0;
   margin-bottom: 0.5rem;
   width: 80vw;
   color: #000000;
-  /* text-shadow: 0px 0px 0px #000000; */
   line-height: 40px;
   font-weight: bold;
+  background-color: white;
+  border-radius: 15px;
+  height: 100px;
+  font-size: large;
+  padding: 10px;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .search {
@@ -171,4 +171,16 @@
 .form {
   padding: 0 2.5rem;
   width: 80vw;
+}
+.logo {
+  position: fixed;
+  top: 5%;
+  right: 25%;
+}
+
+.homeBtn {
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -6,7 +6,7 @@
   font-size: 14px;
   margin-top: 10px;
   font-family: "Times New Roman", Times, serif;
-  background-color: #f8f9fb;;
+  background-color: #f8f9fb;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -31,31 +31,33 @@
 }
 
 .image {
-  font-size: 28px;
+  font-size: 22px;
   margin-bottom: 3px;
-    background-color: #0070f3;
-    height: 7vh;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
- 
+  background-color: #f8f9fb;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-  .navlink a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navlink a:hover {
-    color: white;
-    background-color: rgb(122, 122, 122);
-  }
-  
-  .avatar {
-    height: 3.5vh;
-    width: 3.5vh;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+
+.image a:hover {
+  color: white;
+  background-color: rgb(122, 122, 122);
+}
+
+.navlink a {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink a:hover {
+  color: white;
+  background-color: rgb(122, 122, 122);
+}
+
+.avatar {
+  height: 3.5vh;
+  width: 3.5vh;
+  object-fit: cover;
+  border-radius: 50%;
+}
