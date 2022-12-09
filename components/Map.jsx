@@ -1,30 +1,32 @@
-import react, { useEffect, useState, useRef } from "react";
-import mapboxgl from "!mapbox-gl";
+import React, { useEffect, useState, useRef } from "react";
+import styles from "../styles/Map.module.css";
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZG9kZGUiLCJhIjoiY2xiZjRubG90MDJsYTNuczJyc2ZzcGp6ZyJ9.u3Hj2gtMVqd1_kDJ07_X4g";
 
-export default function Map() {
+export default function Map({ places }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lon, setLng] = useState(12.87194);
+  const [lng, setLng] = useState(12.87194);
   const [lat, setLat] = useState(41.87194);
-  const [zoom, setZoom] = useState(13);
+  const [zoom, setZoom] = useState(9);
 
   useEffect(() => {
-    // initialize map only once
     if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v12",
-      center: [lon, lat],
+      center: [lng, lat],
       zoom: zoom,
     });
   });
 
   useEffect(() => {
-    if (!map.current) return; // wait for map to initialize
+    if (!map.current) return;
     map.current.on("move", () => {
-      setLng(map.current.getCenter().lon.toFixed(4));
+      setLng(map.current.getCenter().lng.toFixed(4));
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
@@ -45,13 +47,30 @@ export default function Map() {
   //     }
   //   });
   // });
+  useEffect(() => {
+    if (!map.current) return;
+    map.current.on("load", () => {
+      console.log(map.current);
+      places.forEach((place) => {
+        if (place.lon && place.lat) {
+          console.log(place);
+          new mapboxgl.Marker()
+            .setLngLat([place.lon, place.lat])
+            .addTo(map.current);
+          map.current.flyTo({
+            center: [place.lon, place.lat],
+          });
+        }
+      });
+    });
+  });
 
   return (
-    <div>
-      <div className="sidebar">
-        Longitude: {lon} | Latitude: {lat} | Zoom: {zoom}
+    <>
+      <div className={styles.sideBar}>
+        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
-      <div ref={mapContainer} className="map-container" />
-    </div>
+      <div ref={mapContainer} className={styles.mapContainer} />
+    </>
   );
 }

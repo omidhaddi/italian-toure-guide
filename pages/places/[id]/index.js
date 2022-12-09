@@ -4,10 +4,12 @@ import Image from 'next/image'
 import Head from 'next/head';
 import placeController from '../../../controllers/place';
 import Map from '../../../components/Map'
+import Link from 'next/link';
 
 
 
-export default function ShowCity({ place }) {
+
+export default function ShowCity({ place, places }) {
 
     return (
         <>
@@ -19,9 +21,14 @@ export default function ShowCity({ place }) {
                 <Image src={place.imageUrl} alt="place" width={350} height={200} />
             </div>
             <p className={styles.cityText}>{place.description}</p>
-
-            <Map></Map>
-
+            <div className={styles.map}>
+                <Map places={places} />
+            </div>
+            <br/>
+            <div>
+                <Link href="/profile" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Add To List</Link>
+            </div>
+        
             <Navbar></Navbar>
         </>
     )
@@ -29,10 +36,10 @@ export default function ShowCity({ place }) {
 export async function getServerSideProps(req, res) {
     const id = req.query.id
     const place = await placeController.find(id)
-    console.log(place);
+    const places = await placeController.all()
 
     return {
 
-        props: { place },
+        props: { place, places },
     }
 }

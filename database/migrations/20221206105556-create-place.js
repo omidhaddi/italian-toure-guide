@@ -16,10 +16,10 @@ module.exports = {
         type: Sequelize.STRING(1000)
       },
       lon: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       lat: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       imageUrl: {
         type: Sequelize.STRING

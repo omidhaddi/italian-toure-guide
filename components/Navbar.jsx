@@ -67,7 +67,7 @@ export default function Navbar() {
             </div>
           </Link>
           <Link
-            href="/"
+            href="/profile"
             style={{
               textDecoration: "none",
               color: "black",
