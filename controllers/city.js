@@ -10,7 +10,13 @@ const cityController = {
     const city = await db.City.findByPk(id)
     const parsedCity = JSON.parse(JSON.stringify(city))
     return parsedCity
-  }
+  },
+  findWithPlaces: async (id) => {
+    const city = await db.City.findByPk(id, { include: db.Place })
+    const parsedCity = JSON.parse(JSON.stringify(city))
+    return parsedCity
+  },
+
 }
 
 export default cityController

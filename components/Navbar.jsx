@@ -1,9 +1,9 @@
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
-import homeIcon from "./images/homeIcon.png";
-import profileIcon from "./images/profileIcon.png";
-import list from "./images/list.png";
-import map from "./images/map.png";
+import homeIcon from "../public/images/homeIcon.png";
+import profileIcon from "../public/images/profileIcon.png";
+import list from "../public/images/list.png";
+import map from "../public/images/map.png";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -87,6 +87,5 @@ export default function Navbar() {
         </div>
       </div>
     </>
-
   );
 }

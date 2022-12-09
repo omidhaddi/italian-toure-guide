@@ -1,11 +1,10 @@
-// import PlaceCard from "../components/PlaceCard"
 import Navbar from "../components/Navbar";
-import italyRome from "../components/images/italyRome.jpg"
+import italyRome from "../public/images/italyRome.jpg"
 // import Search from "../components/Search"
 import styles from "../styles/Home.module.css"
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../components/images/logo.png"
+import logo from "../public/images/logo.png"
 import Link from "next/link";
 
 
