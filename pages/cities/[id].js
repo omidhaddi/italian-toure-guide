@@ -31,7 +31,7 @@ export default function ShowCity({ city, places }) {
     )
 }
 export async function getServerSideProps(req, res) {
-    console.log(res);
+    // console.log(res);
     const id = req.query.id
     const city = await cityController.findWithPlaces(id)
     const places = city.Places
