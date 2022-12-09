@@ -5,7 +5,6 @@ import ImageUpload from '../../components/ImageUpload';
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head';
 
-
 export default function NewFlat() {
 
     return (
