@@ -1,5 +1,9 @@
 import CityCard from "../../components/CityCard"
+import Navbar from "../../components/Navbar";
 import cityController from "../../controllers/city";
+import styles from "../../styles/Card.module.css";
+
+
 
 
 export default function ShowCities({ cities }) {
@@ -7,9 +11,12 @@ export default function ShowCities({ cities }) {
 
     return (
         <>
-            {<div>
+
+            <div className={styles.grid}>
                 {cities.map(city => <CityCard key={city.id} city={city}> </CityCard>)}
-            </div>}
+            </div>
+
+            <Navbar></Navbar>
         </>
     )
 }

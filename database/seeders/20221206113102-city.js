@@ -43,7 +43,7 @@ module.exports = {
     },
     {
 
-      name: 'Peschiera Del Garda',
+      name: 'Peschiera',
       description: `Two million visitors a year for the enchanting Peschiera del Garda, close to the most suggestive lake of Italy and to the amusement park Gardaland. Not no mention that Sirmione, the gem of the lake of Garda, is at only 10 km by car.`,
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/Peschiera-del-Garda_xw4htj.jpg',
       createdAt: new Date(),
