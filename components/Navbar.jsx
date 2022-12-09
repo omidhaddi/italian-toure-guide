@@ -5,8 +5,9 @@ import profileIcon from "../public/images/profileIcon.png";
 import list from "../public/images/list.png";
 import map from "../public/images/map.png";
 import Link from "next/link";
-
+import {signIn,signOut} from "next-auth/react"
 export default function Navbar() {
+  const session = props.session
   return (
     <>
       <div className={styles.navbar}>
@@ -83,9 +84,15 @@ export default function Navbar() {
               />
               Account
             </div>
+            <div>
+          {session ? <button onClick={()=> signOut()}>logout</button> : <button onClick={()=> signIn()}>login</button>}
+        </div>
           </Link>
         </div>
       </div>
     </>
   );
 }
+
+
+       

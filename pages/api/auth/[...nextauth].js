@@ -1,12 +1,26 @@
 import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-const authOptions = {
+import CredentialsProvider from "next-auth/providers/credentials"
+export const authOptions = {
+ secret: 'Secre22t',
  providers: [
-   GithubProvider({
-     clientId: process.env.GITHUB_ID,
-     clientSecret: process.env.GITHUB_SECRET,
-   }),
+   CredentialsProvider({
+     name: "Credentials",
+     credentials: {
+       username: { label: "User", type: "text", placeholder: ".." },
+       password: { label: "Password", type: "password" }
+     },
+     async authorize(credentials, req) {
+       const [user] = credentials.username
+       if (user) {
+         // Any object returned will be saved in `user` property
+         console.log('user in auth ', user)
+         return user
+       } else {
+         // If you return null then an error will be displayed
+         return null
+       }
+     }
+   })
  ],
- secret: process.env.SECRET,//protects our connection
 }
 export default NextAuth(authOptions)
