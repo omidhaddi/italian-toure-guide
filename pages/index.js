@@ -1,17 +1,14 @@
-import Navbar from "../components/Navbar";
+import MainNavbar from "../components/MainNavbar";
 import italyRome from "../public/images/italyRome.jpg"
-// import Search from "../components/Search"
 import styles from "../styles/Home.module.css"
 import Head from "next/head";
 import Image from "next/image";
 import logo from "../public/images/logo.png"
 import Link from "next/link";
-import userController from '../controllers/user'
-import {getSession} from "next-auth/react"
+
 
 
 export default function Home(props) {
-  const users = props.users
   return (
     <>
       <Head>
@@ -37,21 +34,12 @@ export default function Home(props) {
           <h4>Welcome to italian tour guid <br /> the place <br /> that you can manage your trip</h4>
         </div>
         <div className={styles.homeBtn}>
-        <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
+          <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
-        <Navbar user = {currentUser}></Navbar>
+        <MainNavbar />
       </div>
-      <div>
-      <h2>List of Users</h2>
-      {users.map(user => (<p key={user.id}>{user.firstName}</p>))}
-      </div>
+
     </>
   )
 }
-export async function getServerSideProps(req, res) {
-  const users = await userController.all()
-  const currentUser = await getSession(req)
-  return {
-    props: { users,currentUser },
-  }
-}
+

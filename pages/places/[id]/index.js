@@ -2,14 +2,13 @@ import styles from '../../../styles/Card.module.css'
 import Navbar from "../../../components/Navbar"
 import Image from 'next/image'
 import Head from 'next/head';
-import placeController from '../../../controllers/place';
+import placeController from '../../../controllers/place'
 import Map from '../../../components/Map'
-import Link from 'next/link';
+import userController from '../../../controllers/user'
+import cityController from '../../../controllers/city'
 
 
-
-
-export default function ShowCity({ place, places }) {
+export default function ShowCity({ place, places, user, city }) {
 
     return (
         <>
@@ -24,11 +23,22 @@ export default function ShowCity({ place, places }) {
             <div className={styles.map}>
                 <Map places={places} />
             </div>
-            <br/>
-            <div>
-                <Link href="/profile" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Add To List</Link>
-            </div>
-        
+            <form className={styles.btn} action='/api/routes' method="POST">
+                <input hidden={true} type="number" id="UserId" name="UserId" value={user.id} />
+                <input hidden={true} type="number" id="PlaceId" name="PlaceId" value={place.id} />
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Transport</option>
+                    <option value={city.BusPrice}>Bus</option>
+                    <option value={city.MetroPrice}>Metro</option>
+                </select>
+                <br />
+                <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
+            </form>
+            <br />
+            
+            <br />
+            <br />
+            <br />
             <Navbar></Navbar>
         </>
     )
@@ -37,9 +47,12 @@ export async function getServerSideProps(req, res) {
     const id = req.query.id
     const place = await placeController.find(id)
     const places = await placeController.all()
+    const user = await userController.find(id)
+    const city = await cityController.find(id)
+
 
     return {
 
-        props: { place, places },
+        props: { place, places, user, city },
     }
 }

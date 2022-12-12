@@ -1,12 +1,14 @@
+
 import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/Map.module.css";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+// import MapboxDirections from "@mapbox/mapbox-gl-directions";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZG9kZGUiLCJhIjoiY2xiZjRubG90MDJsYTNuczJyc2ZzcGp6ZyJ9.u3Hj2gtMVqd1_kDJ07_X4g";
 
-export default function Map({ places }) {
+export default function Map({places}) {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(12.87194);
@@ -32,21 +34,21 @@ export default function Map({ places }) {
     });
   });
 
-  // useEffect(() => {
-  //   if (!map.current) return; // wait for map to initialize
-  //   map.current.on("load", () => {
-  //     // when the map is loaded
-  //     if (navigator.geolocation) {
-  //       navigator.geolocation.getCurrentPosition((position) => {
-  //         map.current.flyTo({
-  //           center: [position.coords.longitude, position.coords.latitude],
-  //         });
-  //       });
-  //     } else {
-  //       console.log("Geolocation is not supported by this browser.");
-  //     }
-  //   });
-  // });
+  useEffect(() => {
+    if (!map.current) return; // wait for map to initialize
+    map.current.on("load", () => {
+      // when the map is loaded
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          map.current.flyTo({
+            center: [position.coords.longitude, position.coords.latitude],
+          });
+        });
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
+    });
+  });
   useEffect(() => {
     if (!map.current) return;
     map.current.on("load", () => {
@@ -62,6 +64,12 @@ export default function Map({ places }) {
       });
     });
   });
+  // const directions = new MapboxDirections({
+  //   accessToken: mapboxgl.accessToken,
+  //   unit: "metric",
+  //   profile: "mapbox/driving",
+  // });
+  // map.current.addControl(directions, "top-left");
 
   return (
     <>
