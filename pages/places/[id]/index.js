@@ -26,10 +26,10 @@ export default function ShowCity({ place, places, user, city }) {
             <form className={styles.btn} action='/api/routes' method="POST">
                 <input hidden={true} type="number" id="UserId" name="UserId" value={user.id} />
                 <input hidden={true} type="number" id="PlaceId" name="PlaceId" value={place.id} />
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" name="price">
                     <option selected>Select Transport</option>
-                    <option value={city.BusPrice}>Bus</option>
-                    <option value={city.MetroPrice}>Metro</option>
+                    <option value={city.busPrice}>Bus</option>
+                    <option value={city.metroPrice}>Metro</option>
                 </select>
                 <br />
                 <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
