@@ -1,6 +1,6 @@
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
-import back from "../public/images/back.png";
+import homeIcon from "../public/images/homeIcon.png";
 import profileIcon from "../public/images/profileIcon.png";
 import list from "../public/images/list.png";
 import map from "../public/images/map.png";
@@ -21,13 +21,13 @@ export default function Navbar() {
           >
             <div className={styles.icon}>
               <Image
-                src={back}
+                src={homeIcon}
                 className={styles.image}
                 height={30}
                 width={30}
                 alt="icon"
               />
-              Previous Page
+              Home
             </div>
           </Link>
 
@@ -84,10 +84,14 @@ export default function Navbar() {
               />
               Account
             </div>
-            <div></div>
+            <div>
+        </div>
           </Link>
         </div>
       </div>
     </>
   );
 }
+
+
+       
