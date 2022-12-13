@@ -16,8 +16,8 @@ const initPlace = (sequelize, DataTypes) => {
   Place.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
-    lan: DataTypes.INTEGER,
-    lon: DataTypes.INTEGER,
+    lon: DataTypes.FLOAT,
+    lat: DataTypes.FLOAT,
     imageUrl: DataTypes.STRING,
     CityId: DataTypes.INTEGER
   }, {

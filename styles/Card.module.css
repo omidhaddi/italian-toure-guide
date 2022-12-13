@@ -1,0 +1,106 @@
+.grid {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 150px;
+}
+
+.cardCity {
+  margin: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 800px;
+}
+.cardImage {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 135px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.cityText {
+  padding: 1rem;
+  padding-top: 0;
+  text-align: justify;
+}
+
+.nameText {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.map {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 800px;
+}
+
+.btn {
+  text-align: center;
+}
+.headText {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 5px;
+  margin: 10px;
+  font-size: 25px;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.image {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 87%;
+}
+.image2 {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 90%;
+}

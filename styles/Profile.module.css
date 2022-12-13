@@ -1,0 +1,69 @@
+.image {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 87%;
+}
+.image2 {
+  position: fixed;
+  right: 20%;
+  bottom: 7%;
+}
+
+.headText {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 5px;
+  margin: 10px;
+  font-size: 25px;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.headText2 {
+  text-align: center;
+  font-family: Garamond, "Times New Roman", Times, serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.infoText {
+  text-align: left;
+  font-family: Garamond, "Times New Roman", Times, serif;
+  letter-spacing: 3px;
+  font-size: 15px;
+  margin-top: 45px;
+  padding-top: 15px;
+  line-height: 30px;
+}
+
+.homeBtn {
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeBtn2 {
+  position: fixed;
+  top: 54%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.homeBtn3 {
+  position: fixed;
+  top: 60%;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeBtn4 {
+  position: fixed;
+  top: 54%;
+  left: 79.5%;
+  transform: translate(-50%, -50%);
+}

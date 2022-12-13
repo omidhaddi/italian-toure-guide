@@ -1,22 +1,19 @@
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
-import back from "../public/images/back.png";
+import homeIcon from "../public/images/homeIcon.png";
 import profileIcon from "../public/images/profileIcon.png";
 import list from "../public/images/list.png";
 import map from "../public/images/map.png";
 import Link from "next/link";
-import { useRouter } from "next/router";
-
-
+// import {signIn,signOut} from "next-auth/react"
 export default function Navbar() {
-  const router = useRouter();
+  // const session = props.session
   return (
     <>
       <div className={styles.navbar}>
         <div className={styles.navbarLink}>
           <Link
-            onClick={() => router.back()}
-            href=""
+            href="/"
             style={{
               textDecoration: "none",
               color: "black",
@@ -24,18 +21,18 @@ export default function Navbar() {
           >
             <div className={styles.icon}>
               <Image
-                src={back}
+                src={homeIcon}
                 className={styles.image}
                 height={30}
                 width={30}
                 alt="icon"
               />
-              Previous Page
+              Home
             </div>
           </Link>
 
           <Link
-            href="/routes/map"
+            href=""
             style={{
               textDecoration: "none",
               color: "black",
@@ -87,10 +84,14 @@ export default function Navbar() {
               />
               Account
             </div>
-            <div></div>
+            <div>
+        </div>
           </Link>
         </div>
       </div>
     </>
   );
 }
+
+
+       

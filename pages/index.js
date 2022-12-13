@@ -1,17 +1,17 @@
-// import PlaceCard from "../components/PlaceCard"
-import Navbar from "../components/Navbar";
-import italyRome from "../components/images/italyRome.jpg"
-// import Search from "../components/Search"
+import MainNavbar from "../components/MainNavbar";
+import italyRome from "../public/images/italyRome.jpg"
 import styles from "../styles/Home.module.css"
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../components/images/logo.png"
+import logo from "../public/images/logo.png"
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 
 
 export default function Home(props) {
-
+  const { data: session, status } = useSession();
+    const loading = status === "loading";
   return (
     <>
       <Head>
@@ -37,10 +37,29 @@ export default function Home(props) {
           <h4>Welcome to italian tour guid <br /> the place <br /> that you can manage your trip</h4>
         </div>
         <div className={styles.homeBtn}>
-        <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
+          <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
-        <Navbar></Navbar>
+        <div className={styles.image}>
+                {loading && <div>Loading...</div>}
+                {session && (
+                    <Image
+                        src={session.user.image}
+                        alt="userImage"
+                        width={50}
+                        height={50}
+                        className={styles.image}
+                    />
+                )}
+                {!session && (
+                    <>
+
+                    </>
+                )}
+            </div>
+        <MainNavbar />
       </div>
+
     </>
   )
 }
+

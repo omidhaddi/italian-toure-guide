@@ -1,10 +1,5 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css"
-import homeIcon from "../public/images/homeIcon.png"
-import phoneIcon from "../public/images/phoneIcon.png"
-import emailIcon from "../public/images/emailIcon.png"
-import facebookIcon from "../public/images/facebookIcon.png"
-import instagramIcon from "../public/images/instagramIcon.png"
 import Navbar from "../components/Navbar";
 
 
@@ -19,7 +14,7 @@ export default function Contact() {
             <div className={styles.container}>
                 <div className={styles.icon}>
                     <Image
-                        src={homeIcon}
+                        src='/images/phoneIcon.png'
                         className={styles.image}
                         height={30}
                         width={30}
@@ -30,7 +25,7 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src={phoneIcon}
+                        src='/images/phoneIcon.png'
                         className={styles.image}
                         height={30}
                         width={30}
@@ -41,8 +36,8 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src={emailIcon}
-                        className={styles.image}
+                        src='/image/emailIcon.png'
+ n                       className={styles.image}
                         height={30}
                         width={30}
                         alt="icon"
@@ -52,7 +47,7 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src={facebookIcon}
+                        src='/image/facebookIcon.png'
                         className={styles.image}
                         height={30}
                         width={30}
@@ -63,7 +58,7 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src={instagramIcon}
+                        src='/image/instagramIcon.png'
                         className={styles.image}
                         height={30}
                         width={30}

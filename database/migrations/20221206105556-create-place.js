@@ -15,11 +15,11 @@ module.exports = {
       description: {
         type: Sequelize.STRING(1000)
       },
-      lan: {
-        type: Sequelize.INTEGER
-      },
       lon: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
+      },
+      lat: {
+        type: Sequelize.FLOAT
       },
       imageUrl: {
         type: Sequelize.STRING

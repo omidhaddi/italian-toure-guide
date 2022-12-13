@@ -1,12 +1,15 @@
 import Navbar from '../../components/Navbar'
 // import { getSession } from 'next-auth/react'
-// import userController from '../../controllers/userController'
 import ImageUpload from '../../components/ImageUpload';
 import styles from '../../styles/Home.module.css'
-import Head from 'next/head';
+import Head from 'next/head'
+import FormSelect from '../../components/FormSelect';
+import cityController from '../../controllers/city'
 
 
-export default function NewFlat() {
+
+
+export default function NewPlace({cities}) {
 
     return (
         <>
@@ -24,10 +27,22 @@ export default function NewFlat() {
                     <input className="form-control form-control-sm" type="text" id="address" name="address" />
                     <br />
                     <ImageUpload></ImageUpload>
+                    <br />
+                    <FormSelect name='CityId' options={cities}/>
+                    <br />
                     <input className="btn btn-primary btn-lg" type="submit" value="Submit" />
                 </form>
             </div>
             <Navbar></Navbar>
         </>
     )
+}
+
+export async function getServerSideProps(req, res) {
+    const cities = await cityController.all();
+    console.log(cities);
+
+    return {
+        props: { cities },
+    };
 }
