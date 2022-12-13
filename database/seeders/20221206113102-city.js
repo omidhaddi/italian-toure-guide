@@ -10,6 +10,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/roma_mxz5jn.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 12.4964,
+      lat: 41.9028,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -19,6 +24,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/milano_x7ogmr.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 9.1900,
+      lat: 45.4642,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
 
@@ -29,6 +39,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500706/tour-guide/venezia_tr8nmv.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 12.3155,
+      lat: 45.4408,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
 
@@ -39,6 +54,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/firenze_moncol.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 11.2558,
+      lat: 43.7696,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -48,6 +68,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/bologna_xjlzq2.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 11.3426,
+      lat: 44.4949,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -58,6 +83,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/Peschiera-del-Garda_xw4htj.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 10.6865,
+      lat: 45.4396,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
 
@@ -69,6 +99,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500705/tour-guide/napoli_fuu70c.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 14.2681,
+      lat: 40.8518,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
 
@@ -80,6 +115,11 @@ module.exports = {
       imageUrl: 'https://res.cloudinary.com/dgxasrrac/image/upload/v1670500706/tour-guide/torino_tuofm1.jpg',
       busPrice: 2,
       metroPrice: 2.5,
+<<<<<<< HEAD
+=======
+      lon: 7.6869,
+      lat: 45.0703,
+>>>>>>> main
       createdAt: new Date(),
       updatedAt: new Date()
 
