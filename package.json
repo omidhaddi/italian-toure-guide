@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-mapbox-gl": "^5.1.1",
+    "react-stars": "^2.2.5",
     "sequelize": "^6.26.0",
     "sequelize-cli": "^6.5.2"
   }
