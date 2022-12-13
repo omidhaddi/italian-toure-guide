@@ -18,14 +18,11 @@ const placeController = {
     place.setUsers(user)
   },
   create: async (data) => {
-    // console.log('this is data', data);
     const resp = await fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${data.address}.json?access_token=${token}`,
       { method: 'GET' })
     const obj = await resp.json()
-    console.log(obj);
     const [lon, lat] = obj.features[0].geometry.coordinates
-    console.log([lon, lat]);
     const {name, description, imageUrl, CityId } = data
     const place = await db.Place.create({ name, description,lon, lat, imageUrl, CityId  })
     return JSON.parse(JSON.stringify(place))
