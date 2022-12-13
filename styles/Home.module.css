@@ -32,6 +32,13 @@
   color: #0070f3;
   text-decoration: none;
 }
+.image {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 87%;
+
+}
 
 .title a:hover,
 .title a:focus,

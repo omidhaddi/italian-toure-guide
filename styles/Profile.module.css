@@ -3,14 +3,11 @@
   position: fixed;
   right: 10%;
   bottom: 87%;
-
 }
 .image2 {
-  
   position: fixed;
   right: 20%;
   bottom: 7%;
-
 }
 
 .headText {
@@ -22,9 +19,19 @@
   margin-top: 15px;
   padding-top: 15px;
 }
+.headText2 {
+  text-align: center;
+  font-family: Garamond, "Times New Roman", Times, serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 5px;
+  font-size: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
 .infoText {
   text-align: left;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Garamond, "Times New Roman", Times, serif;
   letter-spacing: 3px;
   font-size: 15px;
   margin-top: 45px;
@@ -49,8 +56,8 @@
 .homeBtn3 {
   position: fixed;
   top: 60%;
-  right:0;
-  left:50%;
+  right: 0;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 

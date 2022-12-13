@@ -37,7 +37,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 150px;
+  max-width: 135px;
 }
 
 .card:hover,
@@ -82,4 +82,25 @@
 
 .btn {
   text-align: center;
+}
+.headText {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 5px;
+  margin: 10px;
+  font-size: 25px;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.image {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 87%;
+}
+.image2 {
+  border-radius: 50px;
+  position: fixed;
+  right: 10%;
+  bottom: 90%;
 }

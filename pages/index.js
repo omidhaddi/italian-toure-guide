@@ -5,10 +5,13 @@ import Head from "next/head";
 import Image from "next/image";
 import logo from "../public/images/logo.png"
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 
 
 export default function Home(props) {
+  const { data: session, status } = useSession();
+    const loading = status === "loading";
   return (
     <>
       <Head>
@@ -36,6 +39,23 @@ export default function Home(props) {
         <div className={styles.homeBtn}>
           <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
+        <div className={styles.image}>
+                {loading && <div>Loading...</div>}
+                {session && (
+                    <Image
+                        src={session.user.image}
+                        alt="userImage"
+                        width={50}
+                        height={50}
+                        className={styles.image}
+                    />
+                )}
+                {!session && (
+                    <>
+
+                    </>
+                )}
+            </div>
         <MainNavbar />
       </div>
 

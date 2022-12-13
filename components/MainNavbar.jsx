@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/"
+            href=""
             style={{
               textDecoration: "none",
               color: "black",
@@ -50,7 +50,7 @@ export default function Navbar() {
             </div>
           </Link>
           <Link
-            href="/"
+            href="/routes"
             style={{
               textDecoration: "none",
               color: "black",
