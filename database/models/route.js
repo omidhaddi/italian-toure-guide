@@ -14,7 +14,7 @@ const initRoute = (sequelize, DataTypes) => {
   Route.init({
     UserId: DataTypes.INTEGER,
     PlaceId: DataTypes.INTEGER,
-    price: DataTypes.INTEGER
+    price: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Route',

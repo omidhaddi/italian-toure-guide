@@ -38,14 +38,14 @@ export default function NewPlace({ }) {
                 <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Share your experience</Link>
             </div>
             <div className={styles.homeBtn4}>
-                <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">My List</Link>
+                <Link href="/routes" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">My List</Link>
             </div>
 
             <div>
                 <ul className={styles.infoText}>
                     <li>Name/Last Name : {session.user.name}</li>
                     <li> Email : {session.user.email}</li>
-                    <Image src={logo} alt='image' width={230} height={250} className={styles.image2}/>
+                    <Image src={logo} alt='image' width={230} height={250} className={styles.image2} />
 
                 </ul>
 
@@ -99,7 +99,6 @@ export async function getServerSideProps(req, res) {
     let currentUser = null
     if (session) {
         currentUser = await userController.findEmail(session.user.email)
-
     }
     if (currentUser) {
         return {

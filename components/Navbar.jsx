@@ -5,15 +5,18 @@ import profileIcon from "../public/images/profileIcon.png";
 import list from "../public/images/list.png";
 import map from "../public/images/map.png";
 import Link from "next/link";
-// import {signIn,signOut} from "next-auth/react"
+import { useRouter } from "next/router";
+
+
 export default function Navbar() {
-  // const session = props.session
+  const router = useRouter();
   return (
     <>
       <div className={styles.navbar}>
         <div className={styles.navbarLink}>
           <Link
-            href="/"
+            onClick={() => router.back()}
+            href=""
             style={{
               textDecoration: "none",
               color: "black",
@@ -32,7 +35,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/"
+            href="/routes/map"
             style={{
               textDecoration: "none",
               color: "black",
@@ -50,7 +53,7 @@ export default function Navbar() {
             </div>
           </Link>
           <Link
-            href="/"
+            href="/routes"
             style={{
               textDecoration: "none",
               color: "black",
