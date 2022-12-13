@@ -1,10 +1,10 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css"
-import homeIcon from "../components/images/homeIcon.png"
-import phoneIcon from "../components/images/phoneIcon.png"
-import emailIcon from "../components/images/emailIcon.png"
-import facebookIcon from "../components/images/facebookIcon.png"
-import instagramIcon from "../components/images/instagramIcon.png"
+import homeIcon from "../public/images/homeIcon.png"
+import phoneIcon from "../public/images/phoneIcon.png"
+import emailIcon from "../public/images/emailIcon.png"
+import facebookIcon from "../public/images/facebookIcon.png"
+import instagramIcon from "../public/images/instagramIcon.png"
 import Navbar from "../components/Navbar";
 
 
@@ -12,7 +12,6 @@ import Navbar from "../components/Navbar";
 export default function Contact() {
     return (
         <>
-
             <h1>
                 <>Contact Us</>
             </h1>
