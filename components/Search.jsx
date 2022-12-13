@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Search.module.css";
+import CityCard from "./CityCard";
+import CityMap from "./CityMap";
 
-const Search = () => {
-  const cityList = [{ name: "Milano" }, { name: "Mantova" }, { name: "Roma" }];
-
-  const [cities, setCities] = useState(cityList);
+const Search = ({ cities }) => {
+  const [allCities, setallCities] = useState(cities);
 
   // search the cities
   // when the input changes
@@ -17,10 +16,10 @@ const Search = () => {
     event.preventDefault();
     const searchInput = event.target.value;
     if (searchInput.length > 0) {
-      const newCities = cityList.filter((city) =>
+      const newCities = cities.filter((city) =>
         city.name.toLowerCase().includes(searchInput)
       );
-      setCities(newCities);
+      setallCities(newCities);
     }
   };
 
@@ -33,14 +32,14 @@ const Search = () => {
           placeholder="Search your city"
           onChange={handleChange}
         />
-
-        <ul>
-          {cities.map((city) => (
-            <Link href="/" key={city.name}>
-              <li key={city.name}>{city.name}</li>
-            </Link>
+        <div className={styles.map}>
+          <CityMap cities={cities} />
+        </div>
+        <div>
+          {allCities.map((city) => (
+            <CityCard key={city.id} city={city} />
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

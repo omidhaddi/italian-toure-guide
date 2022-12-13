@@ -24,6 +24,12 @@ module.exports = {
       metroPrice: {
         type: Sequelize.FLOAT
         },
+        lon: {
+          type: Sequelize.FLOAT
+        },
+        lat: {
+          type: Sequelize.FLOAT
+        },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

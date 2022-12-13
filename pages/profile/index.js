@@ -45,7 +45,7 @@ export default function NewPlace({ }) {
                 <ul className={styles.infoText}>
                     <li>Name/Last Name : {session.user.name}</li>
                     <li> Email : {session.user.email}</li>
-                    <Image src={logo} alt='image' width={230} height={250} className={styles.image2}/>
+                    <Image src={logo} alt='image' width={230} height={250} className={styles.image2} />
 
                 </ul>
 
@@ -108,7 +108,7 @@ export async function getServerSideProps(req, res) {
         return {
             redirect: {
                 permanent: false,
-                destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000`
+                destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Fitalian-tour-guide.herokuapp.com`
             }
         }
     }
