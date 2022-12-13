@@ -18,6 +18,12 @@ module.exports = {
       imageUrl: {
         type: Sequelize.STRING
       },
+     busPrice: {
+      type: Sequelize.FLOAT
+      },
+      metroPrice: {
+        type: Sequelize.FLOAT
+        },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
