@@ -1,7 +1,13 @@
-export default function ShowCity() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Review from "../../../components/Review"
 
-    return (
-        <h1>review page</h1>
-    )
+ReactDOM.render(
+  <React.StrictMode>
+    <Review />
+  </React.StrictMode>,
+  document.getElementById('/')
+);
 
-}
+ 
+
