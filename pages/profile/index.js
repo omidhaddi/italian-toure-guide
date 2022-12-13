@@ -8,8 +8,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import logo from '../../public/images/logo.png'
 
-
-export default function NewPlace({ }) {
+export default function NewPlace() {
     const { data: session, status } = useSession();
     const loading = status === "loading";
 
@@ -35,7 +34,7 @@ export default function NewPlace({ }) {
                 <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Add New Place</Link>
             </div>
             <div className={styles.homeBtn3}>
-                <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Share your experience</Link>
+                <Link href='/places/review' className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Share your experience</Link>
             </div>
             <div className={styles.homeBtn4}>
                 <Link href="/routes" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">My List</Link>
@@ -95,6 +94,7 @@ export default function NewPlace({ }) {
 }
 
 export async function getServerSideProps(req, res) {
+
     const session = await getSession(req)
     let currentUser = null
     if (session) {

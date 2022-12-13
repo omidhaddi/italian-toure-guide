@@ -11,7 +11,7 @@ const userController = {
     return JSON.parse(JSON.stringify(user))
   },
   findEmail: async (email) => {
-    const [user, created] = await db.User.findOrCreate({ where: { email: email } })
+    const [user, created] = await db.User.findOrCreate({ include: { all: true, nested: true }, where: { email: email } })
     console.log(created);
     return JSON.parse(JSON.stringify(user))
 

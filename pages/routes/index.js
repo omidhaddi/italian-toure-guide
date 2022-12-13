@@ -1,5 +1,3 @@
-// import placeController from '../../controllers/place'
-import routeController from '../../controllers/route'
 import Navbar from '../../components/Navbar'
 import userController from '../../controllers/user'
 import { getSession, useSession } from 'next-auth/react'
@@ -22,16 +20,15 @@ export default function ShowCity({ routes }) {
 
         <>
             <h3 className={styles.headText}>My Trip List</h3>
-            
+
             <ul className={styles.infoText}>
 
                 {routes.map(route => <li key={route.id}>{route.Place.name} <br /> Transportation Cost: {route.price} € </li>)}
 
             </ul>
-            {/* <label htmlFor="iput" className="form-label">Number Of Person</label>
-            <input className="form-control form-control-sm" type="number" value={5} /> */}
+
             <div>
-                <h5 className={styles.headText2}>Estimated Cost : <strong style={{color:"red"}}>{totalPriceWithPerson}</strong></h5>
+                <h5 className={styles.headText2}>Estimated Cost : <strong style={{ color: "red" }}>{totalPriceWithPerson}</strong></h5>
             </div>
             <div className={styles.image}>
                 {loading && <div>Loading...</div>}
@@ -49,11 +46,11 @@ export default function ShowCity({ routes }) {
                     </>
                 )}
             </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <Navbar></Navbar>
         </>
     )
@@ -62,8 +59,6 @@ export default function ShowCity({ routes }) {
 
 export async function getServerSideProps(req, res) {
 
-    const routes = await routeController.findWithPlaces();
-    // console.log('routes', routes);
     const session = await getSession(req)
     let currentUser = null
     if (session) {
@@ -71,6 +66,7 @@ export async function getServerSideProps(req, res) {
         console.log('this is', currentUser);
     }
     if (currentUser) {
+        const routes = currentUser.Routes
         return {
             props: { currentUser, routes },
         }

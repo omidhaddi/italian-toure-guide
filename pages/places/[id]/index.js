@@ -10,7 +10,7 @@ import { getSession, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 
-export default function ShowCity({ place, places, user, city }) {
+export default function ShowCity({ place, places, currentUser, city }) {
     const { data: session, status } = useSession();
     const loading = status === "loading";
     return (
@@ -27,7 +27,7 @@ export default function ShowCity({ place, places, user, city }) {
                 <Map places={places} />
             </div>
             <form className={styles.btn} action='/api/routes' method="POST">
-                <input hidden={true} type="number" id="UserId" name="UserId" value={user.id} />
+                <input hidden={true} type="number" id="UserId" name="UserId" value={currentUser.id} />
                 <input hidden={true} type="number" id="PlaceId" name="PlaceId" value={place.id} />
                 <select class="form-select" aria-label="Default select example" name="price">
                     <option selected>Select Transport</option>
