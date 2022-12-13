@@ -13,22 +13,25 @@ export default function ShowCity({ routes }) {
     const { data: session, status } = useSession();
     const loading = status === "loading";
 
-
+    let totalPrice = routes.reduce(function (prev, cur) {
+        return prev + cur.price;
+    }, 0);
+    let totalPriceWithPerson = totalPrice * 1
 
     return (
 
         <>
-            <h3>My Trip List</h3>
-            <br />
-            <ul>
+            <h3 className={styles.headText}>My Trip List</h3>
+            
+            <ul className={styles.infoText}>
 
-                {routes.map(route => <li key={route.id}>{route.Place.name} <br/> Transportation Cost: {route.price} € </li>)}
+                {routes.map(route => <li key={route.id}>{route.Place.name} <br /> Transportation Cost: {route.price} € </li>)}
 
             </ul>
+            {/* <label htmlFor="iput" className="form-label">Number Of Person</label>
+            <input className="form-control form-control-sm" type="number" value={5} /> */}
             <div>
-            {/* {arr.map((num, sum = 0) => sum = sum + num)} */}
-            {/* {let result = 0;
-arr.forEach(number => result += number;)} */}
+                <h5 className={styles.headText2}>Estimated Cost : <strong style={{color:"red"}}>{totalPriceWithPerson}</strong></h5>
             </div>
             <div className={styles.image}>
                 {loading && <div>Loading...</div>}
@@ -46,6 +49,11 @@ arr.forEach(number => result += number;)} */}
                     </>
                 )}
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <Navbar></Navbar>
         </>
     )
@@ -55,12 +63,12 @@ arr.forEach(number => result += number;)} */}
 export async function getServerSideProps(req, res) {
 
     const routes = await routeController.findWithPlaces();
-    console.log('routes', routes);
+    // console.log('routes', routes);
     const session = await getSession(req)
     let currentUser = null
     if (session) {
         currentUser = await userController.findEmail(session.user.email)
-
+        console.log('this is', currentUser);
     }
     if (currentUser) {
         return {

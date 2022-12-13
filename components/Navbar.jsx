@@ -6,6 +6,8 @@ import list from "../public/images/list.png";
 import map from "../public/images/map.png";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+
 export default function Navbar() {
   const router = useRouter();
   return (
@@ -33,7 +35,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href=""
+            href="/routes/map"
             style={{
               textDecoration: "none",
               color: "black",

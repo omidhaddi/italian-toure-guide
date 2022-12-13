@@ -6,10 +6,12 @@ import placeController from '../../../controllers/place'
 import Map from '../../../components/Map'
 import userController from '../../../controllers/user'
 import cityController from '../../../controllers/city'
+import { getSession, useSession } from 'next-auth/react';
 
 
 export default function ShowCity({ place, places, user, city }) {
-
+    const { data: session, status } = useSession();
+    const loading = status === "loading";
     return (
         <>
             <Head>
@@ -35,10 +37,27 @@ export default function ShowCity({ place, places, user, city }) {
                 <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
             </form>
             <br />
-            
+
             <br />
             <br />
             <br />
+            <div className={styles.image2}>
+                {loading && <div>Loading...</div>}
+                {session && (
+                    <Image
+                        src={session.user.image}
+                        alt="userImage"
+                        width={50}
+                        height={50}
+                        className={styles.image2}
+                    />
+                )}
+                {!session && (
+                    <>
+
+                    </>
+                )}
+            </div>
             <Navbar></Navbar>
         </>
     )
@@ -49,10 +68,22 @@ export async function getServerSideProps(req, res) {
     const places = await placeController.all()
     const user = await userController.find(id)
     const city = await cityController.find(id)
-
-
-    return {
-
-        props: { place, places, user, city },
+    const session = await getSession(req)
+    let currentUser = null
+    if (session) {
+        currentUser = await userController.findEmail(session.user.email)
+        console.log('this is', currentUser);
+    }
+    if (currentUser) {
+        return {
+            props: { currentUser, place, places, user, city },
+        }
+    } else {
+        return {
+            redirect: {
+                permanent: false,
+                destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000`
+            }
+        }
     }
 }
