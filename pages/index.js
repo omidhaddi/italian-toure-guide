@@ -11,7 +11,7 @@ import { useSession } from "next-auth/react";
 
 export default function Home(props) {
   const { data: session, status } = useSession();
-    const loading = status === "loading";
+  const loading = status === "loading";
   return (
     <>
       <Head>
@@ -36,26 +36,46 @@ export default function Home(props) {
         <div className={styles.homeText}>
           <h4>Welcome to italian tour guid <br /> the place <br /> that you can manage your trip</h4>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
         <div className={styles.homeBtn}>
           <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
         <div className={styles.image}>
-                {loading && <div>Loading...</div>}
-                {session && (
-                    <Image
-                        src={session.user.image}
-                        alt="userImage"
-                        width={50}
-                        height={50}
-                        className={styles.image}
-                    />
-                )}
-                {!session && (
-                    <>
+          {loading && <div>Loading...</div>}
+          {session && (
+            <Image
+              src={session.user.image}
+              alt="userImage"
+              width={50}
+              height={50}
+              className={styles.image}
+            />
+          )}
+          {!session && (
+            <>
 
-                    </>
-                )}
-            </div>
+            </>
+          )}
+        </div>
         <MainNavbar />
       </div>
 
