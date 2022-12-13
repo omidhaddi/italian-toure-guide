@@ -16,7 +16,9 @@ const initCity = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     imageUrl: DataTypes.STRING,
     busPrice: DataTypes.FLOAT,
-    metroPrice: DataTypes.FLOAT
+    metroPrice: DataTypes.FLOAT,
+    lon: DataTypes.FLOAT,
+    lat: DataTypes.FLOAT,
   }, {
     sequelize,
     modelName: 'City',

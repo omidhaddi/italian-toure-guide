@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Route from '../../../components/Route';
 
 
-
 export default function ShowRoute({ places }) {
 
     return (

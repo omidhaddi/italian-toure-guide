@@ -323,13 +323,6 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/mapbox-gl@^2.7.10":
-  version "2.7.10"
-  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-2.7.10.tgz#a3a32a366bad8966c0a40b78209ed430ba018ce1"
-  integrity sha512-nMVEcu9bAcenvx6oPWubQSPevsekByjOfKjlkr+8P91vawtkxTnopDoXXq1Qn/f4cg3zt0Z2W9DVsVsKRNXJTw==
-  dependencies:
-    "@types/geojson" "*"
-
 "@types/minimist@^1.2.0":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
@@ -2142,6 +2135,22 @@ mapbox-gl-controls@^2.3.5:
   dependencies:
     "@turf/distance" "6.3.0"
 
+mapbox-gl-directions@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/mapbox-gl-directions/-/mapbox-gl-directions-3.0.3.tgz#e64db6bc48f1acf1b68b0e22045ace0f8690ae4b"
+  integrity sha512-9PV9sSXffvRzb2hAgC5DAEnYrCdiArIGNVAnBDjpeHRv7a5w6/xo81jQsAHnxdTtUUS7ZgWk6NErWkdH21jkPg==
+  dependencies:
+    deep-assign "^2.0.0"
+    lodash.debounce "^4.0.6"
+    lodash.isequal "^4.2.0"
+    lodash.template "^4.2.5"
+    polyline "^0.2.0"
+    redux "^3.5.2"
+    redux-thunk "^2.1.0"
+    suggestions "1.3.0"
+    turf-extent "^1.0.4"
+    xtend "4.0.1"
+
 mapbox-gl@^2.11.1:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-2.11.1.tgz#72b69c29e51505aaf28b93c942b856ccc6b1a4d2"
@@ -2629,6 +2638,11 @@ picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+polyline@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/polyline/-/polyline-0.2.0.tgz#4f2b716ca81134a6cbaa488975d236ecb1cc2840"
+  integrity sha512-rCJSkIHWZ/HOUoEWgjZ1DrRjLpTeTjgaktyJV0yhm8PugM5sKoavNjUHtI/amjsTn/Tq+Q3IIAuBD/dUSsWwxQ==
 
 postcss@8.4.14:
   version "8.4.14"
@@ -3145,6 +3159,14 @@ styled-jsx@5.1.0:
   integrity sha512-/iHaRJt9U7T+5tp6TRelLnqBqiaIT0HsO0+vgyj8hK2KUk7aejFqRrumqPUlAqDwAj8IbS/1hk3IhBAAK/FCUQ==
   dependencies:
     client-only "0.0.1"
+
+suggestions@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/suggestions/-/suggestions-1.3.0.tgz#0398d52c4315f356591bbcde0733fccf2bfe1567"
+  integrity sha512-HdoYtzDbo6PcUlo9k86+M/8B6ij6VCcPpjLkbAKyf8Dz7NLtiBWOnb/O0uTm/seJApRD7jL1oHgizMZrLlqchw==
+  dependencies:
+    fuzzy "^0.1.1"
+    xtend "^4.0.0"
 
 suggestions@1.3.3:
   version "1.3.3"

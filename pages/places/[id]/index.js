@@ -7,6 +7,7 @@ import Map from '../../../components/Map'
 import userController from '../../../controllers/user'
 import cityController from '../../../controllers/city'
 import { getSession, useSession } from 'next-auth/react';
+import Link from 'next/link';
 
 
 export default function ShowCity({ place, places, user, city }) {
@@ -35,9 +36,14 @@ export default function ShowCity({ place, places, user, city }) {
                 </select>
                 <br />
                 <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
-            </form>
-            <br />
+                <br/>
+                <br/>
 
+                <Link href={`/routes/${place.id}`} className="btn btn-primary btn-lg" role="button" data-bs-toggle="button" aria-pressed="true">Route</Link>
+            </form>
+            <div >
+            </div>
+            <br />
             <br />
             <br />
             <br />

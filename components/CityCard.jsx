@@ -6,7 +6,7 @@ export default function CityCard({ city }) {
   console.log(city);
   return (
     <>
-      <Link href={`cities/${city.id}`}>
+      <Link href={`/cities/${city.id}`}>
         <div className={styles.card}>
           <Image
             src={city.imageUrl}

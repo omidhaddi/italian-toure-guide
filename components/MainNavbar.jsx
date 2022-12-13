@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href=""
+            href="/routes/map"
             style={{
               textDecoration: "none",
               color: "black",
@@ -84,14 +84,10 @@ export default function Navbar() {
               />
               Account
             </div>
-            <div>
-        </div>
+            <div></div>
           </Link>
         </div>
       </div>
     </>
   );
 }
-
-
-       
