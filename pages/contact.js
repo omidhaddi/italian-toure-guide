@@ -14,8 +14,7 @@ export default function Contact() {
             <div className={styles.container}>
                 <div className={styles.icon}>
                     <Image
-                        src='/images/phoneIcon.png'
-                        className={styles.image}
+                        src='/images/homeIcon.png'
                         height={30}
                         width={30}
                         alt="icon"
@@ -26,7 +25,6 @@ export default function Contact() {
                 <div>
                     <Image
                         src='/images/phoneIcon.png'
-                        className={styles.image}
                         height={30}
                         width={30}
                         alt="icon"
@@ -36,8 +34,8 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src='/image/emailIcon.png'
- n                       className={styles.image}
+                        src='/images/emailIcon.png'
+                 
                         height={30}
                         width={30}
                         alt="icon"
@@ -47,8 +45,8 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src='/image/facebookIcon.png'
-                        className={styles.image}
+                        src='/images/facebookIcon.png'
+                        
                         height={30}
                         width={30}
                         alt="icon"
@@ -58,8 +56,7 @@ export default function Contact() {
                 <br />
                 <div>
                     <Image
-                        src='/image/instagramIcon.png'
-                        className={styles.image}
+                        src='/images/instagramIcon.png'
                         height={30}
                         width={30}
                         alt="icon"
