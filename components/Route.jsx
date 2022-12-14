@@ -65,8 +65,6 @@ export default function Map({places}) {
       });
     });
   });
-    });
-  });
 
   return (
     <>
