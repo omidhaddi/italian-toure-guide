@@ -55,7 +55,6 @@ export default function Home(props) {
         <br />
         <br />
         <br />
-        
         <div className={styles.homeBtn}>
           <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
