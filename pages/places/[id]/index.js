@@ -35,7 +35,7 @@ export default function ShowCity({ place, places, currentUser, city }) {
                     <option value={city.metroPrice}>Metro</option>
                 </select>
                 <br />
-                <dev className="d-grid gap-2 col-6 mx-auto">
+               <dev className="d-grid gap-2 col-6 mx-auto">
                     <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
                 </dev>
                 <br />
@@ -43,11 +43,9 @@ export default function ShowCity({ place, places, currentUser, city }) {
                     <Link href={`/routes/${place.id}`} className="btn btn-primary btn-lg" role="button" data-bs-toggle="button" aria-pressed="true">Route</Link>
                 </dev>
             </form>
-            <div >
-            </div>
             <br />
-            <br />
-            <br />
+            <br/>
+            <br/>
             <br />
             <div className={styles.image2}>
                 {loading && <div>Loading...</div>}

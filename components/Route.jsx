@@ -3,13 +3,21 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/Map.module.css";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+<<<<<<< HEAD
+//import MapboxDirections from "@mapbox/mapbox-gl-directions";
+=======
 // import MapboxDirections from "mapbox-gl-directions";
 // import * as MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
+>>>>>>> main
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZG9kZGUiLCJhIjoiY2xiZjRubG90MDJsYTNuczJyc2ZzcGp6ZyJ9.u3Hj2gtMVqd1_kDJ07_X4g";
 
+<<<<<<< HEAD
+export default function Map({ places }) {
+=======
 export default function Map({places}) {
+>>>>>>> main
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(12.87194);
@@ -63,6 +71,16 @@ export default function Map({places}) {
           });
         }
       });
+<<<<<<< HEAD
+    });
+  });
+  // const directions = new MapboxDirections({
+  //   accessToken: mapboxgl.accessToken,
+  //   unit: "metric",
+  //   profile: "mapbox/driving",
+  // });
+  // map.current.addControl(directions, "top-left");
+=======
       // const directions = new MapboxDirections({
       //   accessToken: mapboxgl.accessToken,
       //   unit: "metric",
@@ -72,6 +90,7 @@ export default function Map({places}) {
     });
   });
 
+>>>>>>> main
 
   return (
     <>
@@ -82,6 +101,8 @@ export default function Map({places}) {
     </>
   );
 }
+<<<<<<< HEAD
+=======
 
 // import React from 'react';
 // import './App.css';
@@ -136,3 +157,4 @@ export default function Map({places}) {
 //   }
 // }
 // export default App;
+>>>>>>> main

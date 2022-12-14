@@ -8,7 +8,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import logo from '../../public/images/logo.png'
 
-export default function NewPlace() {
+export default function Profile() {
     const { data: session, status } = useSession();
     const loading = status === "loading";
 
