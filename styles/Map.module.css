@@ -11,13 +11,9 @@
 .mapContainer {
   height: 250px;
 }
-<<<<<<< HEAD
-=======
-
 .mapContainer2 {
   height: 500px;
 }
->>>>>>> main
 .app {
   font-family: sans-serif;
   text-align: center;
@@ -29,10 +25,7 @@
 .mapWrapper {
   width: 85vw;
   height: 50vh;
-<<<<<<< HEAD
-=======
 }
-
 .map {
   margin: 1rem;
   padding: 1rem;
@@ -43,5 +36,4 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 800px;
->>>>>>> main
 }
