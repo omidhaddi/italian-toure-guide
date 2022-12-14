@@ -25,31 +25,33 @@ export default function NewPlace() {
     return (
         <>
             <Head>
-                <title>Add-new-place-ITG</title>
+                <title>Profile-ITG</title>
             </Head>
             <h1 className={styles.headText}>My Profile</h1>
-
-
-            <div className={styles.homeBtn}>
-                <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Add New Place</Link>
-            </div>
-            <div className={styles.homeBtn3}>
-                <Link href='/places/review' className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Share your experience</Link>
-            </div>
-            <div className={styles.homeBtn4}>
-                <Link href="/routes" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">My List</Link>
-            </div>
 
             <div>
                 <ul className={styles.infoText}>
                     <li>Name/Last Name : {session.user.name}</li>
                     <li> Email : {session.user.email}</li>
-                    <Image src={logo} alt='image' width={230} height={250} className={styles.image2} />
-
                 </ul>
-
             </div>
-            <div className={styles.homeBtn2}>
+            <div className={styles.image2}>
+                <Image src={logo} alt='image' width={230} height={250} className={styles.image2} />
+            </div>
+            <br />
+            <div className="d-grid gap-2 col-6 mx-auto">
+                <Link href="/places/new" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Add New Place</Link>
+            </div>
+            <br />
+            <div className="d-grid gap-2 col-6 mx-auto">
+                <Link href='/places/review' className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Share your experience</Link>
+            </div>
+            <br />
+            <div className="d-grid gap-2 col-6 mx-auto">
+                <Link href="/routes" className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">My List</Link>
+            </div>
+            <br />
+            <div className="d-grid gap-2 col-6 mx-auto">
                 {session && (
                     <button
                         href="#"

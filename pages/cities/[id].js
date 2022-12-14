@@ -22,7 +22,7 @@ export default function ShowCity({ city, places }) {
             </div>
             <p className={styles.cityText}>{city.description}</p>
             <br/>
-            <h5>Select Your Place</h5>
+            <h5 style={{paddingLeft:"15px"}}>Select Your Place</h5>
             <div className={styles.grid}>
                 {places.map(place => <PlaceCard key={place.id} place={place}></PlaceCard>)}
             </div>

@@ -1,8 +1,9 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import Review from "../../components/Review"
 import placeController from '../../controllers/place'
 import FormSelectPlace from '../../components/FormSelectPlace';
+import Navbar from '../../components/Navbar';
+
 
 export default function ShowReview({ places }) {
 
@@ -26,9 +27,12 @@ export default function ShowReview({ places }) {
           </div>
           <Review />
           <br />
-          <input className="btn btn-primary btn-lg" type="submit" value="Submit" />
+          <dev class="d-grid gap-2 col-6 mx-auto">
+            <input className="btn btn-primary btn-lg" type="submit" value="Submit" />
+          </dev>
         </form>
       </div>
+      <Navbar></Navbar>
     </>
   );
 }

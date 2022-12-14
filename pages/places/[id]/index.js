@@ -35,11 +35,13 @@ export default function ShowCity({ place, places, currentUser, city }) {
                     <option value={city.metroPrice}>Metro</option>
                 </select>
                 <br />
-                <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
-                <br/>
-                <br/>
-
-                <Link href={`/routes/${place.id}`} className="btn btn-primary btn-lg" role="button" data-bs-toggle="button" aria-pressed="true">Route</Link>
+                <dev className="d-grid gap-2 col-6 mx-auto">
+                    <input className="btn btn-primary btn-lg" type="submit" value="Add To List" />
+                </dev>
+                <br />
+                <dev className="d-grid gap-2 col-6 mx-auto">
+                    <Link href={`/routes/${place.id}`} className="btn btn-primary btn-lg" role="button" data-bs-toggle="button" aria-pressed="true">Route</Link>
+                </dev>
             </form>
             <div >
             </div>

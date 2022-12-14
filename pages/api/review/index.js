@@ -6,6 +6,6 @@ export default async function handler(req, res) {
         UserId, PlaceId, rating, comment
     })
     console.log(review);
-    res.status(200).redirect(`/`);
+    res.status(200).redirect(`/places/reviewAnswer`);
 }
 
