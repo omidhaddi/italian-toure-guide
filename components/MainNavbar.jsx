@@ -32,7 +32,11 @@ export default function Navbar() {
           </Link>
 
           <Link
+<<<<<<< HEAD
+            href=""
+=======
             href="/routes/map"
+>>>>>>> main
             style={{
               textDecoration: "none",
               color: "black",
@@ -84,10 +88,21 @@ export default function Navbar() {
               />
               Account
             </div>
+<<<<<<< HEAD
+            <div>
+        </div>
+=======
             <div></div>
+>>>>>>> main
           </Link>
         </div>
       </div>
     </>
   );
 }
+<<<<<<< HEAD
+
+
+       
+=======
+>>>>>>> main

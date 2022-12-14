@@ -323,6 +323,16 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
+<<<<<<< HEAD
+"@types/mapbox-gl@^2.7.10":
+  version "2.7.10"
+  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-2.7.10.tgz#a3a32a366bad8966c0a40b78209ed430ba018ce1"
+  integrity sha512-nMVEcu9bAcenvx6oPWubQSPevsekByjOfKjlkr+8P91vawtkxTnopDoXXq1Qn/f4cg3zt0Z2W9DVsVsKRNXJTw==
+  dependencies:
+    "@types/geojson" "*"
+
+=======
+>>>>>>> main
 "@types/minimist@^1.2.0":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
@@ -2135,6 +2145,8 @@ mapbox-gl-controls@^2.3.5:
   dependencies:
     "@turf/distance" "6.3.0"
 
+<<<<<<< HEAD
+=======
 mapbox-gl-directions@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/mapbox-gl-directions/-/mapbox-gl-directions-3.0.3.tgz#e64db6bc48f1acf1b68b0e22045ace0f8690ae4b"
@@ -2151,6 +2163,7 @@ mapbox-gl-directions@^3.0.3:
     turf-extent "^1.0.4"
     xtend "4.0.1"
 
+>>>>>>> main
 mapbox-gl@^2.11.1:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-2.11.1.tgz#72b69c29e51505aaf28b93c942b856ccc6b1a4d2"
@@ -3170,6 +3183,8 @@ styled-jsx@5.1.0:
   dependencies:
     client-only "0.0.1"
 
+<<<<<<< HEAD
+=======
 suggestions@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/suggestions/-/suggestions-1.3.0.tgz#0398d52c4315f356591bbcde0733fccf2bfe1567"
@@ -3178,6 +3193,7 @@ suggestions@1.3.0:
     fuzzy "^0.1.1"
     xtend "^4.0.0"
 
+>>>>>>> main
 suggestions@1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/suggestions/-/suggestions-1.3.3.tgz#932200537d453e24d170730cb85e553d8648d09c"
