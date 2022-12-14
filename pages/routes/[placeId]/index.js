@@ -6,10 +6,6 @@ import Link from 'next/link';
 import Route from '../../../components/Route';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 export default function ShowRoute({ places }) {
 
     return (
