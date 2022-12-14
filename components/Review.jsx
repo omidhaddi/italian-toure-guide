@@ -1,13 +1,18 @@
 import React from "react";
-import ReactStars from "react-stars";
 
-export default function SkeletonLoading() {
+export default function Review() {
   return (
     <>
-    <br/>
+      <br />
       <div>
-        <h2>Plase Rate Our App</h2>
-        <ReactStars count={5} size={24} color2={"#ffd700"} />
+        <select class="form-select" aria-label="Default select example" name='rating'>
+          <option selected>Rate Our App</option>
+          <option value={1}>Bad</option>
+          <option value={2}>Weak</option>
+          <option value={3}>Good</option>
+          <option value={4}>Very Good</option>
+          <option value={5}>Excellent</option>
+        </select>
       </div>
     </>
   );

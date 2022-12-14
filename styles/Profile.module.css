@@ -5,9 +5,7 @@
   bottom: 87%;
 }
 .image2 {
-  position: fixed;
-  right: 20%;
-  bottom: 7%;
+  text-align: center;
 }
 
 .headText {
@@ -40,30 +38,17 @@
 }
 
 .homeBtn {
-  position: fixed;
-  top: 54%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .homeBtn2 {
-  position: fixed;
-  top: 54%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .homeBtn3 {
-  position: fixed;
-  top: 60%;
-  right: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .homeBtn4 {
-  position: fixed;
-  top: 54%;
-  left: 79.5%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }

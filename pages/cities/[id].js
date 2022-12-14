@@ -21,8 +21,8 @@ export default function ShowCity({ city, places }) {
                 <Image src={city.imageUrl} alt="city" width={350} height={200} />
             </div>
             <p className={styles.cityText}>{city.description}</p>
-
-
+            <br/>
+            <h5 style={{paddingLeft:"15px"}}>Select Your Place</h5>
             <div className={styles.grid}>
                 {places.map(place => <PlaceCard key={place.id} place={place}></PlaceCard>)}
             </div>

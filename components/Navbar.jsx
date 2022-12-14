@@ -6,7 +6,7 @@ import list from "../public/images/list.png";
 import map from "../public/images/map.png";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import homeIcon from "../public/images/homeIcon.png";
 
 export default function Navbar() {
   const router = useRouter();
@@ -33,7 +33,24 @@ export default function Navbar() {
               Previous Page
             </div>
           </Link>
-
+          <Link
+            href="/"
+            style={{
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            <div className={styles.icon}>
+              <Image
+                src={homeIcon}
+                className={styles.image}
+                height={30}
+                width={30}
+                alt="icon"
+              />
+              Home
+            </div>
+          </Link>
           <Link
             href="/routes/map"
             style={{
