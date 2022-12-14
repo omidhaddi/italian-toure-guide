@@ -28,7 +28,7 @@ export default function ShowCity({ routes }) {
             </ul>
 
             <div>
-                <h5 className={styles.headText2}>Estimated Cost : <strong style={{ color: "red" }}>{totalPriceWithPerson}</strong></h5>
+                <h5 className={styles.headText2}>Estimated Cost : <strong style={{ color: "red" }}>{totalPriceWithPerson} € </strong></h5>
             </div>
             <div className={styles.image}>
                 {loading && <div>Loading...</div>}
