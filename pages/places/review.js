@@ -3,18 +3,41 @@ import Review from "../../components/Review"
 import placeController from '../../controllers/place'
 import FormSelectPlace from '../../components/FormSelectPlace';
 import Navbar from '../../components/Navbar';
+import { getSession, useSession } from 'next-auth/react';
+import Image from 'next/image';
+import styles from '../../styles/Review.module.css'
+import userController from '../../controllers/user'
 
 
-export default function ShowReview({ places }) {
 
+export default function ShowReview({ places, currentUser }) {
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
   return (
     <>
+      <div className={styles.image}>
+        {loading && <div>Loading...</div>}
+        {session && (
+          <Image
+            src={session.user.image}
+            alt="userImage"
+            width={50}
+            height={50}
+            className={styles.image}
+          />
+        )}
+        {!session && (
+          <>
+          </>
+        )}
+      </div>
       <br />
       <div style={{ margin: "10px" }}>
         <br />
         <form action='/api/review' method="POST">
           <FormSelectPlace name='PlaceId' options={places} />
           <br />
+          <input hidden={true} type="number" id="UserId" name="UserId" value={currentUser.id} />
           <div class="form-floating">
             <textarea
               name="comment"
@@ -40,8 +63,22 @@ export default function ShowReview({ places }) {
 
 export async function getServerSideProps(req, res) {
   const places = await placeController.all();
-  console.log(places);
-  return {
-    props: { places },
-  };
+  const session = await getSession(req)
+  let currentUser = null
+  if (session) {
+    currentUser = await userController.findEmail(session.user.email)
+
+  }
+  if (currentUser) {
+    return {
+      props: { currentUser, places },
+    }
+  } else {
+    return {
+      redirect: {
+        permanent: false,
+        destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000`
+      }
+    }
+  }
 }

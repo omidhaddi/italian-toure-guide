@@ -14,13 +14,6 @@ export default function ShowCities({ cities }) {
         <>
             <h3 className={styles.headText}>List Of Cities</h3>
             <br />
-            <div className={styles.grid}>
-                {cities.map(city => <CityCard key={city.id} city={city}> </CityCard>)}
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
             <div className={styles.image}>
                 {loading && <div>Loading...</div>}
                 {session && (
@@ -38,15 +31,21 @@ export default function ShowCities({ cities }) {
                     </>
                 )}
             </div>
+            <div className={styles.grid}>
+                {cities.map(city => <CityCard key={city.id} city={city}> </CityCard>)}
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+
             <Navbar></Navbar>
         </>
     )
 }
 
 export async function getServerSideProps(req, res) {
-
     const cities = await cityController.all()
-    console.log(cities);
     return {
 
         props: { cities }

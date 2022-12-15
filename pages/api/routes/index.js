@@ -5,6 +5,6 @@ export default async function handler(req, res) {
     const route = await routeController.create({
         PlaceId, UserId, price
     })
-    console.log(route);
+
     res.status(200).redirect(`/routes`);
 }

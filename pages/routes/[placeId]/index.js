@@ -28,7 +28,6 @@ export default function ShowRoute({ places }) {
 }
 export async function getServerSideProps(req, res) {
     const places = await placeController.all()
-    console.log(places);
 
     return {
 

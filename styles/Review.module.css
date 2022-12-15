@@ -1,13 +1,5 @@
-.content-Us {
-    display: flex;
-    justify-content: center;
-}
 
-.container {
-    padding: 1rem 2rem;
-  }
-
-  .image {
+.image {
     border-radius: 50px;
     text-align: right;
     margin-right: 15px;

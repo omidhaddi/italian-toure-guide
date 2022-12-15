@@ -28,7 +28,23 @@ export default function Profile() {
                 <title>Profile-ITG</title>
             </Head>
             <h1 className={styles.headText}>My Profile</h1>
+            <div className={styles.image}>
+                {loading && <div>Loading...</div>}
+                {session && (
+                    <Image
+                        src={session.user.image}
+                        alt="userImage"
+                        width={50}
+                        height={50}
+                        className={styles.image}
+                    />
+                )}
+                {!session && (
+                    <>
 
+                    </>
+                )}
+            </div>
             <div>
                 <ul className={styles.infoText}>
                     <li>Name/Last Name : {session.user.name}</li>
@@ -52,6 +68,10 @@ export default function Profile() {
             </div>
             <br />
             <div className="d-grid gap-2 col-6 mx-auto">
+                <Link href='/contact' className="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Contact Us</Link>
+            </div>
+            <br />
+            <div className="d-grid gap-2 col-6 mx-auto">
                 {session && (
                     <button
                         href="#"
@@ -71,25 +91,12 @@ export default function Profile() {
                     </button>
                 )}
             </div>
-
-            <div className={styles.image}>
-                {loading && <div>Loading...</div>}
-                {session && (
-                    <Image
-                        src={session.user.image}
-                        alt="userImage"
-                        width={50}
-                        height={50}
-                        className={styles.image}
-                    />
-                )}
-                {!session && (
-                    <>
-
-                    </>
-                )}
-            </div>
-
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <Navbar></Navbar>
         </>
     )

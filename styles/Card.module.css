@@ -27,6 +27,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 800px;
+  object-fit: cover;
 }
 .cardImage {
   margin: 0;
@@ -38,6 +39,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 135px;
+  object-fit: cover;
 }
 
 .card:hover,
@@ -93,14 +95,13 @@
   padding-top: 15px;
 }
 .image {
+  text-align: right;
+  margin-right: 15px;
   border-radius: 50px;
-  position: fixed;
-  right: 10%;
-  bottom: 87%;
 }
 .image2 {
+  text-align: right;
+  margin-left: 295px;
   border-radius: 50px;
-  position: fixed;
-  right: 10%;
-  bottom: 90%;
 }
+

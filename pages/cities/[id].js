@@ -17,16 +17,7 @@ export default function ShowCity({ city, places }) {
                 <title>city-details-ITG</title>
             </Head>
             <h3 className={styles.nameText}>{city.name}</h3>
-            <div className={styles.cardCity}>
-                <Image src={city.imageUrl} alt="city" width={350} height={200} />
-            </div>
-            <p className={styles.cityText}>{city.description}</p>
-            <br/>
-            <h5 style={{paddingLeft:"15px"}}>Select Your Place</h5>
-            <div className={styles.grid}>
-                {places.map(place => <PlaceCard key={place.id} place={place}></PlaceCard>)}
-            </div>
-            <div className={styles.image2}>
+            <div className={styles.image}>
                 {loading && <div>Loading...</div>}
                 {session && (
                     <Image
@@ -34,15 +25,24 @@ export default function ShowCity({ city, places }) {
                         alt="userImage"
                         width={50}
                         height={50}
-                        className={styles.image2}
+                        className={styles.image}
                     />
                 )}
                 {!session && (
                     <>
-
                     </>
                 )}
             </div>
+            <div className={styles.cardCity}>
+                <Image src={city.imageUrl} alt="city" width={350} height={200} />
+            </div>
+            <p className={styles.cityText}>{city.description}</p>
+            <br />
+            <h5 style={{ paddingLeft: "15px" }}>Select Your Place</h5>
+            <div className={styles.grid}>
+                {places.map(place => <PlaceCard key={place.id} place={place}></PlaceCard>)}
+            </div>
+
             <Navbar></Navbar>
         </>
     )
@@ -51,7 +51,6 @@ export async function getServerSideProps(req, res) {
     const id = req.query.id
     const city = await cityController.findWithPlaces(id)
     const places = city.Places
-    console.log(places);
     return {
 
         props: { city, places },

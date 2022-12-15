@@ -34,9 +34,15 @@
 }
 .image {
   border-radius: 50px;
-  position: fixed;
-  right: 10%;
-  bottom: 87%;
+  text-align: left;
+  margin-left: 290px;
+  margin-top: 35px;
+}
+.image2 {
+  border-radius: 50px;
+  text-align: right;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 .title a:hover,
@@ -176,7 +182,7 @@
 
 .form {
   padding: 0 2.5rem;
-  width: 80vw;
+  width: 100vw;
 }
 .logo {
   position: fixed;

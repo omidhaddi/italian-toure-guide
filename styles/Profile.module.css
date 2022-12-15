@@ -1,8 +1,7 @@
 .image {
   border-radius: 50px;
-  position: fixed;
-  right: 10%;
-  bottom: 87%;
+  text-align: right;
+  margin-right: 15px;
 }
 .image2 {
   text-align: center;
@@ -32,8 +31,6 @@
   font-family: Garamond, "Times New Roman", Times, serif;
   letter-spacing: 3px;
   font-size: 15px;
-  margin-top: 45px;
-  padding-top: 15px;
   line-height: 30px;
 }
 
@@ -51,4 +48,15 @@
 
 .homeBtn4 {
   text-align: center;
+}
+.map {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 800px;
 }

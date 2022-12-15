@@ -5,8 +5,12 @@ export default function Review() {
     <>
       <br />
       <div>
-        <select class="form-select" aria-label="Default select example" name='rating'>
-          <option selected>Rate Our App</option>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          name="rating"
+        >
+          <option selected>Rate The Place</option>
           <option value={1}>Bad</option>
           <option value={2}>Weak</option>
           <option value={3}>Good</option>
