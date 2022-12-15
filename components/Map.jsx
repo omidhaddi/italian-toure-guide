@@ -11,7 +11,7 @@ export default function Map({ places }) {
   const map = useRef(null);
   const [lng, setLng] = useState(12.87194);
   const [lat, setLat] = useState(41.87194);
-  const [zoom, setZoom] = useState(9);
+  const [zoom, setZoom] = useState(15);
 
   useEffect(() => {
     if (map.current) return;

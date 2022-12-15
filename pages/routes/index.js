@@ -3,7 +3,7 @@ import userController from '../../controllers/user'
 import { getSession, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import styles from '../../styles/Profile.module.css'
-import Map from '../../components/Map'
+import Map from '../../components/MapList'
 import placeController from '../../controllers/place'
 
 
@@ -47,7 +47,7 @@ export default function ShowCity({ routes, places }) {
             <div>
                 <h5 className={styles.headText2}>Estimated Cost : <strong style={{ color: "red" }}>{totalPriceWithPerson} € </strong></h5>
             </div>
-           
+
             <div className={styles.map}>
                 <Map places={places} />
             </div>
