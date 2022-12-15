@@ -4,6 +4,7 @@ import cityController from "../../controllers/city";
 import styles from "../../styles/Card.module.css";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import Head from "next/head";
 
 
 
@@ -12,6 +13,9 @@ export default function ShowCities({ cities }) {
     const loading = status === "loading";
     return (
         <>
+            <Head>
+                <title>Cities-ITG</title>
+            </Head>
             <h3 className={styles.headText}>List Of Cities</h3>
             <br />
             <div className={styles.image}>

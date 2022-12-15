@@ -7,6 +7,7 @@ import { getSession, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import styles from '../../styles/Review.module.css'
 import userController from '../../controllers/user'
+import Head from 'next/head';
 
 
 
@@ -15,6 +16,9 @@ export default function ShowReview({ places, currentUser }) {
   const loading = status === "loading";
   return (
     <>
+      <Head>
+        <title>review-ITG</title>
+      </Head>
       <div className={styles.image}>
         {loading && <div>Loading...</div>}
         {session && (
@@ -77,7 +81,7 @@ export async function getServerSideProps(req, res) {
     return {
       redirect: {
         permanent: false,
-        destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000`
+        destination: `/signin`
       }
     }
   }

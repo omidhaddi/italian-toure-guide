@@ -3,11 +3,18 @@ import Navbar from '../../components/Navbar'
 import cityController from '../../controllers/city'
 import styles from '../../styles/Card.module.css'
 import Search from '../../components/Search'
+import Head from 'next/head'
+
+
+
 
 export default function ShowRoute({ cities }) {
 
     return (
         <>
+        <Head>
+        <title>Map-ITG</title>
+      </Head>
             <div >
        <Search style={{
                     textAlign: 'center',

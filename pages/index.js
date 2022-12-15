@@ -50,26 +50,24 @@ export default function Home() {
           width={200}
           alt="icon"
         />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div className={styles.homeText}>
           <h4>Welcome to italian tour guid <br /> the place <br /> that you can manage your trip</h4>
         </div>
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div className={styles.homeBtn}>
-          <Link href="/cities" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
+          <Link href="/cities" className="btn btn-danger d-grid gap-2 col-9 mx-auto" role="button" data-bs-toggle="button" aria-pressed="true">Lets Start</Link>
         </div>
 
         <MainNavbar />

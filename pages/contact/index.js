@@ -3,6 +3,7 @@ import styles from "../../styles/contact.module.css"
 import Navbar from "../../components/Navbar";
 import italy from '../../public/images/italy.jpeg'
 import { useSession } from "next-auth/react";
+import Head from "next/head";
 
 
 
@@ -11,6 +12,9 @@ export default function Contact() {
     const loading = status === "loading";
     return (
         <>
+            <Head>
+                <title>My List-ITG</title>
+            </Head>
             <div style={{
                 backgroundImage: `url(${italy.src})`,
                 width: '100vw',

@@ -117,7 +117,7 @@ export async function getServerSideProps(req, res) {
         return {
             redirect: {
                 permanent: false,
-                destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Fitalian-tour-guide.herokuapp.com`
+                destination: `/signin`
             }
         }
     }

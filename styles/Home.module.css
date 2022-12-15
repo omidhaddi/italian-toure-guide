@@ -140,10 +140,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80vw;
   margin-bottom: 0.5rem;
   width: 80vw;
@@ -157,6 +153,7 @@
   padding: 10px;
   text-align: center;
   padding-top: 15px;
+  margin-left: 38px;
 }
 
 .search {

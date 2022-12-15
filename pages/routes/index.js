@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from '../../styles/Profile.module.css'
 import Map from '../../components/MapList'
 import placeController from '../../controllers/place'
+import Head from 'next/head'
 
 
 
@@ -21,6 +22,9 @@ export default function ShowCity({ routes, places }) {
     return (
 
         <>
+            <Head>
+                <title>My List-ITG</title>
+            </Head>
             <h3 className={styles.headText}>My Trip List</h3>
             <div className={styles.image}>
                 {loading && <div>Loading...</div>}
@@ -78,7 +82,7 @@ export async function getServerSideProps(req, res) {
         return {
             redirect: {
                 permanent: false,
-                destination: `/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000`
+                destination: `/signin`
             }
         }
     }
