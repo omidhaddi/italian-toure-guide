@@ -13,6 +13,7 @@ import Link from 'next/link';
 export default function ShowCity({ place, currentUser, city }) {
     const { data: session, status } = useSession();
     const loading = status === "loading";
+    console.log(city);
     return (
         <>
             <Head>
@@ -72,8 +73,8 @@ export default function ShowCity({ place, currentUser, city }) {
 export async function getServerSideProps(req, res) {
     const id = req.query.id
     const place = await placeController.find(id)
-    const user = await userController.find(id)
-    const city = await cityController.find(id)
+    // const user = await userController.find(id)
+    const city = await cityController.find(place.CityId)
     const session = await getSession(req)
     let currentUser = null
     if (session) {
@@ -82,7 +83,7 @@ export async function getServerSideProps(req, res) {
     }
     if (currentUser) {
         return {
-            props: { currentUser, place, user, city },
+            props: { currentUser, place, city },
         }
     } else {
         return {
