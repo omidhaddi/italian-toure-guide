@@ -53,7 +53,7 @@ export default function ShowCity({ routes, places }) {
             </div>
 
             <div className={styles.map}>
-                <Map places={places} />
+                <Map places={routes.map(route => route.Place)} />
             </div>
             <br />
             <br />
